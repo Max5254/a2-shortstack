@@ -6,12 +6,14 @@ const submit = function( e ) {
           json = { yourname: input.value },
           body = JSON.stringify( json )
 
+    console.log( 'sending request' )
     fetch( '/submit', {
       method:'POST',
       body 
     })
     .then( function( response ) {
       // do something with the response 
+      console.log( 'got response' )
       console.log( response )
     })
 
